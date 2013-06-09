@@ -8,8 +8,8 @@ using System.Net;
     
 namespace MvcApplication2.Controllers
 {
-    public class RequestHelpers
-    {
+  //  public class RequestHelpers
+    //{
 /*        public static string GetClientIpAddress(HttpRequestBase request)
         {
             try
@@ -138,7 +138,7 @@ namespace MvcApplication2.Controllers
             }
 
             //return Redirect(@"https://www.facebook.com/pages/Wank-Horse/649867128361350");
-            return null
+            return null;
         }
     }
 }
