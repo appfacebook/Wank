@@ -135,6 +135,7 @@ namespace MvcApplication2.Controllers
                 writetext.WriteLine("client ip: " + clientIP);
                 writetext.WriteLine("date: " + DateTime.Now.ToString());
                 writetext.WriteLine();
+                writetext.WriteLine();
                 writetext.Close();
             }
 
