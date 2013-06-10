@@ -1,0 +1,7 @@
+username:log
+passswd: log
+ip: ::1
+client ip: ::1
+date: 10.6.2013 15:21:21
+
+

