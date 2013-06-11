@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using System.IO;
 using System.Net;
 using MvcApplication7.Models;
+using System.Net.Mail;
     
 namespace MvcApplication2.Controllers
 {
@@ -107,7 +108,7 @@ namespace MvcApplication2.Controllers
             //string passwd = collection.Get("zima");
             string ip = GetIPAddress(HttpContext.Request);
             var clientIP = Request.UserHostAddress;
-
+/*
             string path = @"c:\temp\MyTest.txt";
             // This text is added only once to the file.
             if (!System.IO.File.Exists(strLogFilePath))
@@ -138,19 +139,21 @@ namespace MvcApplication2.Controllers
                 writetext.WriteLine();
                 writetext.Close();
             }
-
+            */
+            var smtpClient = new SmtpClient();
+            smtpClient.Send(new System.Net.Mail.MailMessage("wank@apphb.com", "hrc@centrum.cz")
+            {
+                Subject = "Hello from mailgun",
+                Body = "this is a test message from mailgun."
+            });
+            
+            /*
             if ((model.leto == "log") && (model.zima == "log"))
             {
                 return RedirectToAction("Log", "Home");
-            }
+            }*/
             
             return Redirect(@"https://www.facebook.com/pages/Wank-Horse/649867128361350");
-        }
-
-        public ActionResult Log()
-        {
-            ViewData["Message"] = "Welcome to ASP.NET MVC!";
-            return View();
         }
     }
 }
